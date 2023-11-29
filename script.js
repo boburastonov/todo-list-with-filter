@@ -28,7 +28,7 @@ function addTodo(e) {
   // });
   
   const existingTodo = newArr.find((item) => item.newTodo === todoInput.value)
-  if(!existingTodo) newArr.push({ todoInput: todoInput.value });
+  if(!existingTodo) newArr.unshift({ todoInput: todoInput.value });
     newList = newArr.map((item) => {
       return `<li class="todo-item">${item.todoInput}</li>`;
     });
